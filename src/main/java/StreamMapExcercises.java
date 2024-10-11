@@ -1,4 +1,5 @@
 import java.util.List;
+import java.util.Map;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.stream.Collectors;
@@ -19,15 +20,17 @@ public class StreamMapExcercises {
         .map(employee -> getCapitalizedWord(employee.getName()))
         .collect(Collectors.toList());
     return capitalizedNames;
-  }
+  }  
 
   private static String getCapitalizedWord(String word){
     return word.substring(0, 1).toUpperCase() + word.substring(1);
   }
+
+  
   
 }
 
-class Employee {
+/*class Employee {
   String name;
   int age;
 
@@ -55,4 +58,4 @@ class Employee {
     this.age = age;
   };
 
-}
+}*/

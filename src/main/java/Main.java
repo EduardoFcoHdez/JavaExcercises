@@ -14,12 +14,13 @@ public class Main {
                 put("Ian", 10);
             }
         };
-
+    
         List<Employee> employees = new ArrayList<Employee>(Arrays.asList(
-            new Employee("eduardo", 42),
-            new Employee("dylan", 10),
-            new Employee("claudia", 39),
-            new Employee("ian", 10)
+            new Employee("eduardo", 42, "Finance"),
+            new Employee("pie", 55, "Finance"),
+            new Employee("dylan", 10, "Finance"),
+            new Employee("claudia", 39, "Contrallor"),
+            new Employee("ian", 10, "Contrallor")
         )); 
         
         
@@ -27,10 +28,23 @@ public class Main {
         youngPeople.forEach(entry -> System.out.println(entry.getKey() + " " + entry.getValue()));*/
         
         /*List<String> youngPeople = StreamMapExcercises.getYoungEmployees(employees);
-        youngPeople.forEach(System.out::println);*/        
+        youngPeople.forEach(System.out::println);*/
         
-        List<String> capitalizedNames = StreamMapExcercises.getEmployeeCapitalizedNames(employees);
-        capitalizedNames.forEach(System.out::println);
+        /*String reverseStr = StringExcercises.reverseString("Eduardo");
+        System.out.println(reverseStr);*/
+        
+        /*List<String> capitalizedNames = StreamMapExcercises.getEmployeeCapitalizedNames(employees);
+        capitalizedNames.forEach(System.out::println);*/
+
+        var employeesByDepartment = StreamExcercises.getEmployeesByDepartment(employees);
+
+        employeesByDepartment.forEach((department, employeesInDepartment) -> {
+            System.out.println("Department:"+department +"Employees:" + employeesInDepartment);
+        });
+        
+         /*Integer [] numbers = {1, 2, 3, 2, 1};
+        var numberFrequency = StreamExcercises.getNumberFrequency(numbers);
+        System.out.println(numberFrequency);*/
         
         
     }
