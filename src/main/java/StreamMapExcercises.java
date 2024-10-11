@@ -1,7 +1,4 @@
 import java.util.List;
-import java.util.Map;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.stream.Collectors;
 
 
@@ -24,38 +21,8 @@ public class StreamMapExcercises {
 
   private static String getCapitalizedWord(String word){
     return word.substring(0, 1).toUpperCase() + word.substring(1);
-  }
-
-  
+  }  
   
 }
 
-/*class Employee {
-  String name;
-  int age;
 
-  Employee() {
-  }
-
-  Employee(String name, int age) {
-    this.name = name;
-    this.age = age;
-  }
-
-  String getName() {
-    return this.name;
-  }
-
-  void setName(String name) {
-    this.name = name;
-  }
-
-  int getAge() {
-    return this.age;
-  }
-
-  public void setAge(int age) {
-    this.age = age;
-  };
-
-}*/
