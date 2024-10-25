@@ -36,16 +36,19 @@ public class Main {
         /*List<String> capitalizedNames = StreamMapExcercises.getEmployeeCapitalizedNames(employees);
         capitalizedNames.forEach(System.out::println);*/
 
-        var employeesByDepartment = StreamExcercises.getEmployeesByDepartment(employees);
+        /*var employeesByDepartment = StreamExcercises.getEmployeesByDepartment(employees);
 
         employeesByDepartment.forEach((department, employeesInDepartment) -> {
             System.out.println("Department:"+department +"Employees:" + employeesInDepartment);
-        });
+        });*/
+
+        var stringsLengths = StreamMapExcercises.convertStringsToLengths(Arrays.asList("shortStuff","MediumStuff","LongStuff"));
+        stringsLengths.forEach(System.out::println);
+
         
          /*Integer [] numbers = {1, 2, 3, 2, 1};
         var numberFrequency = StreamExcercises.getNumberFrequency(numbers);
         System.out.println(numberFrequency);*/
-        
         
     }
 }

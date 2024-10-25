@@ -1,3 +1,4 @@
+import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -17,12 +18,18 @@ public class StreamMapExcercises {
         .map(employee -> getCapitalizedWord(employee.getName()))
         .collect(Collectors.toList());
     return capitalizedNames;
-  }  
+  }
+
+  public static List<Integer> convertStringsToLengths(List<String> strings){
+    return strings.stream()
+            .map(String::length).collect(Collectors.toList());
+  }
 
   private static String getCapitalizedWord(String word){
     return word.substring(0, 1).toUpperCase() + word.substring(1);
   }  
-  
+
+
 }
 
 
