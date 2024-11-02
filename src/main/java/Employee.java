@@ -12,15 +12,15 @@ public class Employee{
      this.department = department;
    }
 
-   String getName() {
+   public String getName() {
      return this.name;
    }
 
-   void setName(String name) {
+   public void setName(String name) {
      this.name = name;
    }
 
-   int getAge() {
+   public int getAge() {
      return this.age;
    }
 
@@ -35,5 +35,5 @@ public class Employee{
    public String getDepartment(){
      return this.department;
    }
-  
+
 }
