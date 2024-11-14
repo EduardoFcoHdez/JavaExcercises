@@ -13,7 +13,6 @@ public class StringExcercises{
         j--;
       }
 
-    return new String (wordArray); 
-      
+    return new String (wordArray);
     }
 }
