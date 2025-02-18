@@ -21,40 +21,49 @@ public class Main {
             new Employee("dylan", 10, "Finance"),
             new Employee("claudia", 39, "Contrallor"),
             new Employee("ian", 10, "Contrallor")
-        )); 
-        
+        ));
         
         /*List<Map.Entry<String, Integer>> youngPeople =  HasmapExcercises.getYoungPeopleNames(peopleMap);
         youngPeople.forEach(entry -> System.out.println(entry.getKey() + " " + entry.getValue()));*/
         
         /*List<String> youngPeople = StreamMapExcercises.getYoungEmployees(employees);
         youngPeople.forEach(System.out::println);*/
-        
-        /*String reverseStr = StringExcercises.reverseString("Eduardo");
+
+        /*String reverseStr = StringExcercises.reverseString2("Claudia");
+        System.out.println("*************************************************");
         System.out.println(reverseStr);*/
+
+        /*String cleanedString  = StringExcercises.removeWhiteSpaces3("C l a u d i a");
+        System.out.println("*************************************************");
+        System.out.println(cleanedString);*/
+
+        HashMap<Character, Integer> letterCount = new HashMap<>(StringExcercises.countOccurrences("adaaa"));
+        letterCount.forEach( (key, value) -> {
+            System.out.println("Key:" + key +"Value:" + value);
+        });
+
         
         /*List<String> capitalizedNames = StreamMapExcercises.getEmployeeCapitalizedNames(employees);
         capitalizedNames.forEach(System.out::println);*/
 
-        var employeesByDepartment = StreamExcercises.getEmployeesByDepartment(employees);
-
+        /*var employeesByDepartment = StreamExcercises.getEmployeesByDepartment(employees);
         employeesByDepartment.forEach((department, employeesInDepartment) -> {
             System.out.println("Department:"+department +"Employees:" + employeesInDepartment);
-        });
+        });*/
 
         /*var stringsLengths = StreamMapExcercises.convertStringsToLengths(Arrays.asList("shortStuff","MediumStuff","LongStuff"));
         stringsLengths.forEach(System.out::println);*/
 
-//         Integer [] numbers = {1, 2, 3, 2, 1};
-//        var numberFrequency = StreamExcercises.getNumberFrequency(numbers);
-//        System.out.println(numberFrequency);
+        /*Integer [] numbers = {1, 2, 3, 2, 1};
+        var numberFrequency = StreamExcercises.getNumberFrequency(numbers);
+        System.out.println(numberFrequency);*/
 
-//        Integer [] numbers = {3,6,9,12};
-//        var pairNumbers = StreamExcercises.getPairNumbers(numbers);
-//        Arrays.asList(pairNumbers).forEach(System.out::println);
+        /*Integer [] numbers = {3,6,9,12};
+        var pairNumbers = StreamExcercises.getPairNumbers(numbers);
+        Arrays.asList(pairNumbers).forEach(System.out::println);*/
 
-
-
-
+        /*var numbers = Arrays.asList(1, 2, null, 3, null);
+        var cleanedNumbers = ArrayExcercises.removeNullElements(numbers);
+        cleanedNumbers.forEach( System.out::println );*/
     }
 }
