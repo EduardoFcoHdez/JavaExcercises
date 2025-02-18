@@ -1,4 +1,5 @@
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 
@@ -19,24 +20,34 @@ public class StreamMapExcercises {
   }
 
   public static List<String> getYoungEmployees(List<Employee> employees){
-          List<String> youngEmployees = employees.stream() 
-                             .filter(employee -> employee.getAge() < 18)
-                             .map(employee -> employee.getName())
-                             .collect(Collectors.toList());
-      return youngEmployees;
+    List<String> youngEmployees = employees.stream()
+            .filter(employee -> employee.getAge() < 18)
+            .map(employee -> employee.getName())
+            .collect(Collectors.toList());
+    return youngEmployees;
   }
 
   public static List<String> getEmployeeCapitalizedNames(List<Employee> employees) {
     List<String> capitalizedNames = employees.stream()
-        .map(employee -> getCapitalizedWord(employee.getName()))
-        .collect(Collectors.toList());
+            .map(employee -> getCapitalizedWord(employee.getName()))
+            .collect(Collectors.toList());
     return capitalizedNames;
+  }
+
+  public static List<Map.Entry<String, Integer>> getEmployeeNameAndAge(List<Employee> employees){
+
+    List<Map.Entry<String, Integer>> employeesNameAge = employees.stream()
+            .map( (employee)-> {
+              return Map.entry(employee.name, employee.age);
+            } )
+            .collect(Collectors.toList());
+
+    return employeesNameAge;
   }
 
   private static String getCapitalizedWord(String word){
     return word.substring(0, 1).toUpperCase() + word.substring(1);
   }
-
 
 }
 

@@ -37,11 +37,31 @@ public class Main {
         System.out.println("*************************************************");
         System.out.println(cleanedString);*/
 
-        HashMap<Character, Integer> letterCount = new HashMap<>(StringExcercises.countOccurrences("adaaa"));
+        /*HashMap<Character, Integer> letterCount = new HashMap<>(StringExcercises.countOccurrences("adaaa"));
         letterCount.forEach( (key, value) -> {
             System.out.println("Key:" + key +"Value:" + value);
-        });
+        });*/
 
+        /*int [] numbers = {1, 2, 3, 2, 1};
+        var numberFrequency = ArrayExcercises.getNumbersFrequency(numbers);
+        System.out.println(numberFrequency);*/
+
+        /*int [] numbers = {1, 2, 3, 5, 1};
+        int[] minMaxValues = ArrayExcercises.findArrayMaxMin(numbers);
+        System.out.println(minMaxValues[0]);
+        System.out.println(minMaxValues[1]);*/
+
+        /*int [] numbers = {1, 2, 3, 4, 5, 6};
+        int[] reversedNumbers = ArrayExcercises.reverseNumbers(numbers);
+        for(int number: reversedNumbers){
+            System.out.println(number);
+        }*/
+
+        /*int [] numbers = {1, 2, 1, 4, 2, 6};
+        int[] uniqueNumbers = ArrayExcercises.removeDuplicates(numbers);
+        for(int number : uniqueNumbers){
+            System.out.println(number);
+        }*/
         
         /*List<String> capitalizedNames = StreamMapExcercises.getEmployeeCapitalizedNames(employees);
         capitalizedNames.forEach(System.out::println);*/
